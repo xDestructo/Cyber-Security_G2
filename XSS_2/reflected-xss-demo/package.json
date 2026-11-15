@@ -1,0 +1,12 @@
+{
+  "name": "reflected-xss-demo",
+  "version": "1.0.0",
+  "description": "Reflected XSS educational demonstration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

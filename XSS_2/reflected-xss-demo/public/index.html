@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflected XSS Demonstration</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+
+    <h1>Reflected XSS Demonstration</h1>
+
+    <p class="subtitle">
+        Web Application Security Testing
+    </p>
+
+    <div class="card">
+        <h2>Search Application</h2>
+
+        <p>Enter a search query to test the application:</p>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Enter your search query..."
+        >
+
+        <div class="buttons">
+            <button onclick="openMode('vulnerable')">
+                Test Vulnerable Mode
+            </button>
+
+            <button class="secure-btn" onclick="openMode('safe')">
+                Test Secure Mode
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Test XSS Payload</h2>
+
+        <code>&lt;script&gt;alert('Reflected XSS')&lt;/script&gt;</code>
+
+        <button class="payload-btn" onclick="insertPayload()">
+            Insert Test Payload
+        </button>
+    </div>
+
+</div>
+
+<script>
+
+    function openMode(mode) {
+
+        const query = document.getElementById("searchInput").value;
+
+        const params = new URLSearchParams();
+        params.set("q", query);
+
+        window.location.href =
+            "/" + mode + "?" + params.toString();
+    }
+
+    function insertPayload() {
+
+        document.getElementById("searchInput").value =
+            "<script>alert('Reflected XSS')<\/script>";
+
+    }
+
+</script>
+</body>
+</html>
