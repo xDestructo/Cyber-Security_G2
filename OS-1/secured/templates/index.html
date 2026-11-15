@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Server Diagnostic Tool — Secured</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 760px; margin: 48px auto; padding: 0 18px; background: #f5f7fb; color: #172033; }
+    .card { background: white; padding: 26px; border-radius: 12px; box-shadow: 0 4px 18px #17203318; }
+    .badge { display: inline-block; background: #d9f7e5; color: #12643a; padding: 6px 10px; border-radius: 6px; font-weight: bold; }
+    input { width: min(100%, 460px); box-sizing: border-box; padding: 11px; margin: 8px 0; border: 1px solid #bbc4d3; border-radius: 6px; }
+    button { padding: 11px 18px; border: 0; border-radius: 6px; background: #16804a; color: white; cursor: pointer; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; background: #101827; color: #e8eef8; padding: 16px; border-radius: 8px; min-height: 80px; }
+    .note { color: #5c6678; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="badge">SECURED LAB</span>
+    <h1>Server Diagnostic Tool</h1>
+    <p>Enter a hostname or IP address to run a one-packet ping.</p>
+    <form method="post">
+      <label for="host">Hostname / IP address</label><br>
+      <input id="host" name="host" value="{{ submitted_host }}" placeholder="127.0.0.1" required>
+      <button type="submit">Run ping</button>
+    </form>
+    <h2>Command output</h2>
+    <pre>{{ output if output else "Results will appear here." }}</pre>
+    <p class="note">This version uses argument-vector execution without a shell and applies basic input validation.</p>
+  </div>
+</body>
+</html>
