@@ -8,4 +8,4 @@
 | Kartik Aggarwal | IIT2024068 | OS Command Injection | In-Band |
 | Karan Kandhare | IIT2024032 | CSRF | GET-Based forced action |
 | Mayank Rai | IIT20240103 | XSS | Reflected XSS |
-| Aditya Bhatnagar | IIT2024072 | ... | ... |
+| Aditya Bhatnagar | IIT2024072 | CSRF | POST-based forged action |

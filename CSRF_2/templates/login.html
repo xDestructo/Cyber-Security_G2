@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in · Aditya Account</title>
+  <style>
+    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172033; background: #f3f6fb; }
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 24px; }
+    main { width: min(100%, 410px); padding: 36px; background: #fff; border: 1px solid #e4e9f2; border-radius: 16px; box-shadow: 0 16px 48px #1c315414; }
+    .mark { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; color: #fff; background: #315ce8; font-weight: 700; }
+    h1 { margin: 22px 0 8px; font-size: 1.65rem; }
+    p { margin: 0 0 24px; color: #647089; line-height: 1.5; }
+    label { display: block; margin: 16px 0 7px; font-size: .9rem; font-weight: 600; }
+    input { width: 100%; padding: 12px 13px; border: 1px solid #cfd7e6; border-radius: 9px; font: inherit; }
+    input:focus { outline: 3px solid #315ce826; border-color: #315ce8; }
+    button { width: 100%; margin-top: 22px; padding: 12px; border: 0; border-radius: 9px; color: white; background: #315ce8; font: inherit; font-weight: 650; cursor: pointer; }
+    .flash { margin: 14px 0; padding: 10px 12px; border-radius: 8px; background: #fff0f0; color: #a12626; font-size: .92rem; }
+    .hint { margin: 18px 0 0; font-size: .84rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark" aria-hidden="true">A</div>
+    <h1>Welcome back</h1>
+    <p>Sign in to manage your account details.</p>
+    {% for category, message in get_flashed_messages(with_categories=true) %}
+      <div class="flash" role="alert">{{ message }}</div>
+    {% endfor %}
+    <form method="post" action="{{ url_for('login') }}">
+      {% if csrf_protection %}<input type="hidden" name="csrf_token" value="{{ csrf_token }}">{% endif %}
+      <label for="username">Username</label>
+      <input id="username" name="username" autocomplete="username" required>
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
+      <button type="submit">Sign in</button>
+    </form>
+    <p class="hint">Local classroom demo account: aditya / 12345</p>
+  </main>
+</body>
+</html>
