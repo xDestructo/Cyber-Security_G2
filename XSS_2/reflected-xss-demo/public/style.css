@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #60a5fa;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #94a3b8;
+    margin-bottom: 35px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 75%;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+button {
+    padding: 14px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.result {
+    background: #0f172a;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow-wrap: anywhere;
+}
+
+.badge {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 7px;
+    margin-bottom: 25px;
+}
+
+.vulnerable {
+    background: #7f1d1d;
+    color: #fecaca;
+}
+
+.secure {
+    background: #14532d;
+    color: #bbf7d0;
+}
+
+.description {
+    color: #cbd5e1;
+    margin: 20px 0;
+}
+
+code {
+    display: block;
+    background: #0f172a;
+    color: #f87171;
+    padding: 15px;
+    border-radius: 7px;
+    overflow-wrap: anywhere;
+}
+
+a {
+    color: #60a5fa;
+    text-decoration: none;
+}
