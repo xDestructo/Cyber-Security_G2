@@ -7,7 +7,7 @@
 
 ------------------------------------------------------------------------
 
-## 📌 Overview
+## Overview
 
 This repository contains a demonstration of **Stored Cross-Site
 Scripting (XSS)** (CWE-79) and its corresponding mitigation.
@@ -24,7 +24,7 @@ the exploit and the mitigation.
 
 ------------------------------------------------------------------------
 
-## 🚀 How to Run the Application
+## How to Run the Application
 
 **Prerequisites:** Node.js installed on your machine. No external `npm`
 packages are required.
@@ -49,7 +49,7 @@ packages are required.
 
 ------------------------------------------------------------------------
 
-## 🏗️ Architecture and File Structure
+## Architecture and File Structure
 
 This project deliberately avoids frameworks (like Express or React) to
 keep the data flow completely transparent and easy to explain.
@@ -74,7 +74,7 @@ the login page:
 
 ------------------------------------------------------------------------
 
-## 💥 The Vulnerability (Stored XSS)
+## The Vulnerability (Stored XSS)
 
 -   **Vulnerability Class:** CWE-79 (Improper Neutralization of Input
     During Web Page Generation)
@@ -129,7 +129,7 @@ The following is the demonstration payload as supplied:
 
 ------------------------------------------------------------------------
 
-## 🛡️ The Mitigation (Implemented Fix)
+## The Mitigation (Implemented Fix)
 
 Clicking the **"Toggle Fix"** button switches the application to Secure
 Mode, which implements two layers of defense.
@@ -166,7 +166,7 @@ net.
 
 ------------------------------------------------------------------------
 
-## 📚 Other Mitigation Theory (Not Implemented)
+## Other Mitigation Theory (Not Implemented)
 
 While this demo implements output encoding and CSP, other theoretical
 mitigations from the lecture slides include:
